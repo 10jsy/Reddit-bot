@@ -32,8 +32,6 @@ while True:
 
         if keyword in submission.title.lower() and submission.id not in post_id:
 
-            # print("Thread title: " + submission.title)
-            # print("Score: ", submission.score)
             title.append(submission.title)
             post_id.append(submission.id)
             post.append(submission.selftext)
@@ -47,9 +45,6 @@ while True:
                     top_comment_score = parent_comment.score
                     top_comment = parent_comment.body
 
-                # comment = parent_comment.body
-                # upvote = parent_comment.score
-                # print("Upvote: %d, Comments: %s" % (upvote, comment))
             reply.append(top_comment)
 
     break
